@@ -64,23 +64,6 @@ npm run build
 
 ---
 
-## 📂 Project Structure
-
-```
-.
-├── public/
-│   └── textures/      # Planet textures
-├── src/
-│   ├── main.js        # Main entry point
-│   └── ...            # Other source files
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-```
-
----
-
 ## 🛠️ Tech Stack
 
 Three.js • Vite • JavaScript • HTML • CSS
@@ -106,5 +89,3 @@ This project is licensed under the MIT License — see LICENSE for details.
 - 🛰️ 3D inspiration: Three.js Examples
 - 👥 Contributors
 ```
-
-你直接全选复制 → 新建文件 → 保存为 **README.md** 就是完整文件。
