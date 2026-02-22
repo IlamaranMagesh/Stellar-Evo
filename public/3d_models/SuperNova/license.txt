@@ -1,0 +1,11 @@
+Model Information:
+* title:	Evolution of supernova 1987A
+* source:	https://sketchfab.com/3d-models/evolution-of-supernova-1987a-30d07a9e9a2e45ce81caffed2c0f3989
+* author:	Salvatore Orlando (https://sketchfab.com/sorlando)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Evolution of supernova 1987A" (https://sketchfab.com/3d-models/evolution-of-supernova-1987a-30d07a9e9a2e45ce81caffed2c0f3989) by Salvatore Orlando (https://sketchfab.com/sorlando) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
