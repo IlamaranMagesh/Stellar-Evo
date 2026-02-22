@@ -3,12 +3,79 @@ canvas {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1; /* Keeps it behind the UI */
+    z-index: 0; /* Keeps it behind the UI */
 }
+
+.page {
+    display: none;
+    z-index: 1;
+}
+
+.page.active {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+#years {
+    display: flex;
+    position: fixed;
+    top: 95%;
+    left: 90%;
+    color: white;
+    font-size: 20px;
+    font-family: "Andale Mono", monospace;
+    z-index: 1;
+}
+
+#title {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Audiowide', sans-serif;
+    z-index: 1;
+    background: 50% 100%/0% 100% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+    background-clip: text;
+    color: transparent;
+    animation: reveal 1500ms ease-in-out forwards 200ms, glow 3000ms alternate-reverse;
+}
+
+@-webkit-keyframes reveal {
+    80% {
+        letter-spacing: 8px;
+    }
+    100% {
+        background-size: 300% 300%;
+    }
+}
+@keyframes reveal {
+    80% {
+        letter-spacing: 8px;
+    }
+    100% {
+        background-size: 300% 300%;
+    }
+}
+@-webkit-keyframes glow {
+    40% {
+        text-shadow: 0 0 8px #fff;
+    }
+}
+@keyframes glow {
+    40% {
+        text-shadow: 0 0 8px #fff;
+    }
+}
+
 
 #button-container {
     position: fixed;
-    top: 0;
+    top: 30%;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -45,8 +112,6 @@ canvas {
     background-origin: border-box;
     background-clip: content-box, border-box;
     font-family: "Orbitron", sans-serif;
-    top: 50%;
-    left: 50%;
 }
 
 #container-stars {

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>My first three.js app</title>
+    <title>Stellar-Evo</title>
     <style>
-
         @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+        @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
         body { margin: 0; }
 
     </style>
@@ -13,23 +13,32 @@
 
 </head>
 <body>
-
-
-<div id="button-container">
-<!-- From Uiverse.io by rubyreapergaming -->
-<button type="button" class="btn">
-    <strong>SPACE</strong>
-    <div id="container-stars">
-        <div id="stars"></div>
+    <div id="ui-container">
+        <section id="page-home" class = "page active">
+            <div id="title" name="game-title">
+                Stellar-Evo
+            </div>
+            <div id="button-container">
+                <!-- From Uiverse.io by rubyreapergaming -->
+                <button type="button" id="play-btn" class = "btn">
+                    <strong>Play</strong>
+                    <div id="container-stars">
+                        <div id="stars"></div>
+                    </div>
+                    <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </button>
+            </div>
+        </section>
+        <section id="page-sim" class = "page">
+            <div id="years">
+                Years
+            </div>
+        </section>
     </div>
 
-    <div id="glow">
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div>
-</button>
-</div>
-
-<script type="module" src="src/main.js"></script>
+    <script type="module" src="src/main.js"></script>
 </body>
 </html>
