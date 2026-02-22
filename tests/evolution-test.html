@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>test of evolution models switch</title>
+    <style>
+        /* the style of the buttons and canvas, you can adjust it as you like*/
+        .model-switch-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            margin-right: 10px;
+            background: #42b983;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .model-switch-btn:hover {
+            background: #359469;
+        }
+        // make the canvas fill the whole screen and hide scrollbars
+        body { margin: 0; overflow: hidden; }
+    </style>
+</head>
+<body>
+     /* buttons to switch models, make sure the IDs match the ones in your script*/
+    <button class="model-switch-btn" id="btn-switch">load the next model</button>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { loadEvolutionModel } from '../src/evolution/modelLoader.js';
+        import { STAR_EVOLUTION_MODELS } from '../src/evolution/evolutionModels.js';
+
+        // 初始化场景
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        camera.position.z = 5;
+
+        // 控制器和光源
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+        scene.add(new THREE.DirectionalLight(0xffffff, 1));
+
+        // 动画循环（持续渲染）
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // 初始化加载地球模型
+        loadEvolutionModel(scene, STAR_EVOLUTION_MODELS.d_planet_earth_transparent_bg)
+            .catch(err => {
+                console.error('模型加载失败：', err);
+                alert(err.message);
+            });
+
+        // 绑定按钮点击事件（核心：切换模型）
+        document.getElementById('btn-earth').addEventListener('click', () => {
+            loadEvolutionModel(scene, STAR_EVOLUTION_MODELS.d_planet_earth_transparent_bg);
+        });
+        document.getElementById('btn-planet').addEventListener('click', () => {
+            loadEvolutionModel(scene, STAR_EVOLUTION_MODELS.generic_planet);
+        });
+
+        // 窗口大小适配
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>
