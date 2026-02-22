@@ -29,7 +29,7 @@ Screenshot
 ### ⚙️ Installation
 
 ```bash
-git clone 
+git clone https://github.com/IlamaranMagesh/Stellar-Evo.git
 cd Stellar-Evo
 npm install
 ```
