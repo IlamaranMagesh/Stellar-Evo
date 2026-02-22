@@ -30,39 +30,61 @@ const stellarPath = new StellarPath(scene, camera, renderer);
 // ─────────────────────────────────────────────
 //  UI references
 // ─────────────────────────────────────────────
-const pageHome     = document.getElementById('page-home');
-const pageMass     = document.getElementById('page-mass');
-const pageSim      = document.getElementById('page-sim');
-const playBtn      = document.getElementById('play-btn');
-const stageLabel   = document.getElementById('stage-label');
-const stageDesc    = document.getElementById('stage-desc');
-const yearsEl      = document.getElementById('years');
-const prevBtn      = document.getElementById('prev-btn');
-const nextBtn      = document.getElementById('next-btn');
-const progressDots = document.getElementById('progress-dots');
-const loadingEl    = document.getElementById('loading-overlay');
-const loadStatus   = document.getElementById('load-status');
-const massInput    = document.getElementById('mass-input');
-const beginBtn     = document.getElementById('begin-btn');
-const massError    = document.getElementById('mass-error');
+const pageHome    = document.getElementById('page-home');
+const pageMass    = document.getElementById('page-mass');
+const pageSim     = document.getElementById('page-sim');
+const playBtn     = document.getElementById('play-btn');
+const stageLabel  = document.getElementById('stage-label');
+const stageDesc   = document.getElementById('stage-desc');
+const yearsEl     = document.getElementById('years');
+const loadingEl   = document.getElementById('loading-overlay');
+const loadStatus  = document.getElementById('load-status');
+const massInput   = document.getElementById('mass-input');
+const beginBtn    = document.getElementById('begin-btn');
+const massError   = document.getElementById('mass-error');
+
+// Slider elements
+const evoSlider     = document.getElementById('evo-slider');
+const sliderLabels  = document.getElementById('slider-labels');
 
 // ─────────────────────────────────────────────
-//  Progress dots — rebuilt when path is chosen
+//  Slider — build for a given path
 // ─────────────────────────────────────────────
-function buildDots(path) {
-  progressDots.innerHTML = '';
-  path.forEach((_, i) => {
-    const dot = document.createElement('div');
-    dot.classList.add('dot');
-    if (i === 0) dot.classList.add('active');
-    progressDots.appendChild(dot);
+function buildSlider(path) {
+  const count = path.length;
+
+  // Set slider range to match stage count
+  evoSlider.min   = 0;
+  evoSlider.max   = count - 1;
+  evoSlider.step  = 1;
+  evoSlider.value = 0;
+
+  // Build labels
+  sliderLabels.innerHTML = '';
+  path.forEach((stage) => {
+    const span = document.createElement('span');
+    span.classList.add('slider-label');
+    span.textContent = stage.label;
+    // Click on label → jump to that stage
+    span.addEventListener('click', () => {
+      const idx = path.indexOf(stage);
+      evoSlider.value = idx;
+      onSliderChange(idx);
+    });
+    sliderLabels.appendChild(span);
   });
+
+  updateSliderUI(0, count);
 }
 
-function updateDots(index) {
-  document.querySelectorAll('.dot').forEach((d, i) => {
-    d.classList.toggle('active',  i === index);
-    d.classList.toggle('visited', i < index);
+// Update track fill + label highlights
+function updateSliderUI(index, total) {
+  const pct = total > 1 ? (index / (total - 1)) * 100 : 0;
+  evoSlider.style.setProperty('--fill', `${pct}%`);
+
+  document.querySelectorAll('.slider-label').forEach((el, i) => {
+    el.classList.toggle('active',  i === index);
+    el.classList.toggle('visited', i < index);
   });
 }
 
@@ -81,18 +103,59 @@ function updateUI(stage) {
   stageLabel.textContent = stage.label;
   stageDesc.textContent  = stage.description;
   yearsEl.textContent    = `~${formatYears(stage.durationYears)}`;
-  prevBtn.disabled       = stellarPath.isFirst;
-  nextBtn.disabled       = stellarPath.isLast;
-  updateDots(stellarPath.currentIndex);
+  updateSliderUI(stellarPath.currentIndex, stellarPath.activeStages.length);
 }
 
 // ─────────────────────────────────────────────
-//  Preload — total unique models across both paths
-//  (Nebula + Protostar shared = 7 unique + 1 bg = 8)
+//  Slider change handler
 // ─────────────────────────────────────────────
-const UNIQUE_MODELS = 7;  // nebula, protostar, ms1, red_giant, white_dwarf, ms2, red_supergiant, supernova
-const TOTAL_ASSETS  = UNIQUE_MODELS + 1; // +1 background
-let   loadedCount   = 0;
+function onSliderChange(index) {
+  if (stellarPath.isAnimating) {
+    // Snap slider back if mid-animation
+    evoSlider.value = stellarPath.currentIndex;
+    return;
+  }
+  if (index === stellarPath.currentIndex) return;
+  stellarPath.transitionTo(index, onProgress);
+}
+
+evoSlider.addEventListener('input', () => {
+  onSliderChange(parseInt(evoSlider.value));
+});
+
+// Keyboard: left/right arrows still work
+window.addEventListener('keydown', (e) => {
+  if (!pageSim.classList.contains('active')) return;
+  if (stellarPath.isAnimating) return;
+
+  const cur = stellarPath.currentIndex;
+  const max = stellarPath.activeStages.length - 1;
+
+  if ((e.key === 'ArrowRight' || e.key === 'ArrowDown') && cur < max) {
+    evoSlider.value = cur + 1;
+    onSliderChange(cur + 1);
+  }
+  if ((e.key === 'ArrowLeft' || e.key === 'ArrowUp') && cur > 0) {
+    evoSlider.value = cur - 1;
+    onSliderChange(cur - 1);
+  }
+});
+
+// ─────────────────────────────────────────────
+//  Transition callback
+// ─────────────────────────────────────────────
+function onProgress(_status, stage) {
+  updateUI(stage);
+  // Keep slider thumb in sync if transition was triggered by keyboard
+  evoSlider.value = stellarPath.currentIndex;
+  loadingEl.classList.add('hidden');
+}
+
+// ─────────────────────────────────────────────
+//  Preload
+// ─────────────────────────────────────────────
+const TOTAL_ASSETS = 8; // 7 unique models + 1 background
+let   loadedCount  = 0;
 
 playBtn.disabled = true;
 playBtn.style.opacity = '0.4';
@@ -110,20 +173,7 @@ function onOneLoaded() {
 }
 
 stellarPath.loadBackground().then(onOneLoaded);
-stellarPath.preloadAll((loaded, _total) => onOneLoaded());
-
-// ─────────────────────────────────────────────
-//  Transition callback
-// ─────────────────────────────────────────────
-function onProgress(_status, stage) {
-  updateUI(stage);
-  loadingEl.classList.add('hidden');
-}
-
-function goToStage(dir) {
-  if (dir === 'next') stellarPath.next(onProgress);
-  else                stellarPath.prev(onProgress);
-}
+stellarPath.preloadAll(() => onOneLoaded());
 
 // ─────────────────────────────────────────────
 //  Mass input validation
@@ -157,32 +207,20 @@ playBtn.addEventListener('click', () => {
   setTimeout(() => massInput.focus(), 50);
 });
 
-// Mass input → Sim
+// Mass → Sim
 beginBtn.addEventListener('click', () => {
   if (beginBtn.disabled) return;
 
   const mass = parseFloat(massInput.value);
-
-  // Select path based on mass
   stellarPath.selectPath(mass);
 
-  // Rebuild dots for the chosen path
-  buildDots(stellarPath.activeStages);
+  // Build slider for the chosen path
+  buildSlider(stellarPath.activeStages);
 
   pageMass.classList.remove('active');
   pageSim.classList.add('active');
 
   stellarPath.transitionTo(0, onProgress);
-});
-
-// Sim navigation
-nextBtn.addEventListener('click', () => goToStage('next'));
-prevBtn.addEventListener('click', () => goToStage('prev'));
-
-window.addEventListener('keydown', (e) => {
-  if (!pageSim.classList.contains('active')) return;
-  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goToStage('next');
-  if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   goToStage('prev');
 });
 
 // ─────────────────────────────────────────────
