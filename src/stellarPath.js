@@ -22,7 +22,7 @@ export const PATH1 = [
   {
     id: 'protostar',
     label: 'Protostar',
-    modelPath: '/3d_models/Protostar/',
+    modelPath: '/3d_models/Protostar2/',
     description: 'Gravity collapses the cloud. A hot, dense core ignites.',
     durationYears: 100_000,
     cameraDistance: 8,
@@ -90,7 +90,7 @@ export const PATH2 = [
   {
     id: 'protostar',
     label: 'Protostar',
-    modelPath: '/3d_models/Protostar/',
+    modelPath: '/3d_models/Protostar2/',
     description: 'Gravity collapses the cloud. A hot, dense core ignites.',
     durationYears: 100_000,
     cameraDistance: 8,
@@ -152,6 +152,7 @@ function resolveGLTFUrl(folderPath) {
     `${folder}/${name}.gltf`,
     `${folder}/scene.gltf`,
     `${folder}/model.gltf`,
+    `${folder}/model.glb`,
   ];
 }
 
@@ -357,6 +358,7 @@ export class StellarPath {
           undefined,
           (err) => { console.warn(`[${stage.id}] failed: ${url}`, err.message ?? err); tryNext(); }
         );
+
       };
       tryNext();
     });
