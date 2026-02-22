@@ -15,7 +15,9 @@ The website simulates and visualizes the entire lifecycle of a star—from a pro
 
 ## 📸 Screenshots
 
-[Screenshot](https://raw.githubusercontent.com/IlamaranMagesh/Stellar-Evo/refs/heads/main/public/ScreenShots/1.png)
+# Stellar Evolution Project
+## Screenshot of Simulation
+![Stellar Evolution Screenshot 1](https://raw.githubusercontent.com/IlamaranMagesh/Stellar-Evo/refs/heads/main/public/ScreenShots/1.png)
 
 ---
 
