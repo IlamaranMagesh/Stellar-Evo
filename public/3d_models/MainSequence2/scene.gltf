@@ -5,14 +5,14 @@
       "componentType": 5126,
       "count": 559,
       "max": [
-        88.4468994140625,
-        94.1281967163086,
-        92.06300354003906
+        2.169219970703125,
+        2.169224739074707,
+        2.1692206859588623
       ],
       "min": [
-        -95.67900085449219,
-        -89.9977035522461,
-        -92.06300354003906
+        -2.1692185401916504,
+        -2.169224739074707,
+        -2.1692190170288086
       ],
       "type": "VEC3"
     },
@@ -22,14 +22,14 @@
       "componentType": 5126,
       "count": 559,
       "max": [
+        0.9999983310699463,
         1.0,
-        1.0,
-        1.0
+        0.9999983310699463
       ],
       "min": [
+        -0.9999983310699463,
         -1.0,
-        -1.0,
-        -1.0
+        -0.9999983310699463
       ],
       "type": "VEC3"
     },
@@ -43,7 +43,7 @@
       ],
       "min": [
         0.0,
-        -0.0
+        0.0
       ],
       "type": "VEC2"
     },
@@ -57,32 +57,32 @@
       "bufferView": 2,
       "byteOffset": 13416,
       "componentType": 5126,
-      "count": 640,
+      "count": 559,
       "max": [
-        92.0031967163086,
-        97.68450164794922,
-        95.6603012084961
+        22.705060958862305,
+        22.705068588256836,
+        22.705068588256836
       ],
       "min": [
-        -99.23529815673828,
-        -93.55400085449219,
-        -95.6603012084961
+        -22.705047607421875,
+        -22.705068588256836,
+        -22.705053329467773
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 21096,
+      "byteOffset": 20124,
       "componentType": 5126,
-      "count": 640,
+      "count": 559,
       "max": [
-        0.9995706677436829,
-        0.9995706677436829,
+        1.0,
+        1.0,
         1.0
       ],
       "min": [
-        -0.9995706677436829,
-        -0.9995706677436829,
+        -1.0,
+        -1.0,
         -1.0
       ],
       "type": "VEC3"
@@ -91,14 +91,14 @@
       "bufferView": 1,
       "byteOffset": 4472,
       "componentType": 5126,
-      "count": 640,
+      "count": 559,
       "max": [
-        0.9781000018119812,
-        0.9781000018119812
+        1.0,
+        1.0
       ],
       "min": [
-        0.021900000050663948,
-        0.021900000050663948
+        0.0,
+        0.0
       ],
       "type": "VEC2"
     },
@@ -112,12 +112,12 @@
   ],
   "asset": {
     "extras": {
-      "author": "edouard.angebault (https://sketchfab.com/edouard.angebault)",
+      "author": "Azariah Animates (https://sketchfab.com/Azariah_Animates)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/planet-8833f9251838434d9590ee972d49d963",
-      "title": "planet"
+      "source": "https://sketchfab.com/3d-models/beetleguese-big-but-draining-star-8444f7378572465c815691a83666c967",
+      "title": "Beetleguese: Big But Draining Star"
     },
-    "generator": "Sketchfab-12.66.0",
+    "generator": "Sketchfab-16.95.0",
     "version": "2.0"
   },
   "bufferViews": [
@@ -129,7 +129,7 @@
     },
     {
       "buffer": 0,
-      "byteLength": 9592,
+      "byteLength": 8944,
       "byteOffset": 23040,
       "byteStride": 8,
       "name": "floatBufferViews",
@@ -137,8 +137,8 @@
     },
     {
       "buffer": 0,
-      "byteLength": 28776,
-      "byteOffset": 32632,
+      "byteLength": 26832,
+      "byteOffset": 31984,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
@@ -146,73 +146,44 @@
   ],
   "buffers": [
     {
-      "byteLength": 61408,
+      "byteLength": 58816,
       "uri": "scene.bin"
     }
   ],
-  "extensionsRequired": [
-    "KHR_materials_pbrSpecularGlossiness"
-  ],
   "extensionsUsed": [
-    "KHR_materials_pbrSpecularGlossiness"
+    "KHR_materials_unlit"
   ],
   "images": [
     {
-      "uri": "textures/Material__25_diffuse.jpeg"
-    },
-    {
-      "uri": "textures/Material__65_diffuse.png"
+      "uri": "textures/mat0_baseColor.jpeg"
     }
   ],
   "materials": [
     {
-      "emissiveTexture": {
-        "index": 0
-      },
-      "extensions": {
-        "KHR_materials_pbrSpecularGlossiness": {
-          "diffuseFactor": [
-            1.0,
-            1.0,
-            1.0,
-            1.0
-          ],
-          "diffuseTexture": {
-            "index": 0
-          },
-          "glossinessFactor": 0.20999999999999996,
-          "specularFactor": [
-            0.05,
-            0.05,
-            0.05
-          ]
-        }
-      },
-      "name": "Material__25"
-    },
-    {
-      "alphaMode": "BLEND",
       "doubleSided": true,
       "extensions": {
-        "KHR_materials_pbrSpecularGlossiness": {
-          "diffuseFactor": [
-            1.0,
-            1.0,
-            1.0,
-            1.0
-          ],
-          "diffuseTexture": {
-            "index": 1
-          },
-          "glossinessFactor": 0.0,
-          "specularFactor": [
-            1.0,
-            1.0,
-            1.0
-          ]
-        }
+        "KHR_materials_unlit": {}
       },
-      "name": "Material__65"
+      "name": "mat0",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "mat1",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      }
     }
   ],
   "meshes": [
@@ -253,17 +224,17 @@
         1
       ],
       "matrix": [
-        6.037148475646973,
+        1.0,
         0.0,
         0.0,
         0.0,
         0.0,
-        1.340516248148787e-15,
-        -6.037148475646973,
+        -1.0,
+        -4.440892098500626e-16,
         0.0,
         0.0,
-        6.037148475646973,
-        1.340516248148787e-15,
+        4.440892098500626e-16,
+        -1.0,
         0.0,
         0.0,
         0.0,
@@ -277,7 +248,7 @@
         2,
         3
       ],
-      "name": "planet.obj.cleaner.materialmerger.gles"
+      "name": "Mercury.obj.cleaner.materialmerger.gles"
     },
     {
       "mesh": 0,
@@ -309,10 +280,6 @@
     {
       "sampler": 0,
       "source": 0
-    },
-    {
-      "sampler": 0,
-      "source": 1
     }
   ]
 }

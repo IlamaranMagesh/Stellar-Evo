@@ -1,11 +1,11 @@
 Model Information:
-* title:	Vesta
-* source:	https://sketchfab.com/3d-models/vesta-211c60fc4ef94e8f900a8bc51befc316
-* author:	YouAreCool8294 (https://sketchfab.com/YouAreCool8294)
+* title:	Beetleguese: Big But Draining Star
+* source:	https://sketchfab.com/3d-models/beetleguese-big-but-draining-star-8444f7378572465c815691a83666c967
+* author:	Azariah Animates (https://sketchfab.com/Azariah_Animates)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Vesta" (https://sketchfab.com/3d-models/vesta-211c60fc4ef94e8f900a8bc51befc316) by YouAreCool8294 (https://sketchfab.com/YouAreCool8294) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Beetleguese: Big But Draining Star" (https://sketchfab.com/3d-models/beetleguese-big-but-draining-star-8444f7378572465c815691a83666c967) by Azariah Animates (https://sketchfab.com/Azariah_Animates) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

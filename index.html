@@ -1,44 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Stellar-Evo</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-        @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
-        body { margin: 0; }
-
-    </style>
-    <link href="index.css" rel="stylesheet" />
-
+  <meta charset="utf-8" />
+  <title>Stellar-Evo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700&display=swap');
+    body { margin: 0; background: #02020f; overflow: hidden; }
+  </style>
+  <link href="index.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="ui-container">
-        <section id="page-home" class = "page active">
-            <div id="title" name="game-title">
-                Stellar-Evo
-            </div>
-            <div id="button-container">
-                <!-- From Uiverse.io by rubyreapergaming -->
-                <button type="button" id="play-btn" class = "btn">
-                    <strong>Play</strong>
-                    <div id="container-stars">
-                        <div id="stars"></div>
-                    </div>
-                    <div id="glow">
-                        <div class="circle"></div>
-                        <div class="circle"></div>
-                    </div>
-                </button>
-            </div>
-        </section>
-        <section id="page-sim" class = "page">
-            <div id="years">
-                Years
-            </div>
-        </section>
+
+<div id="ui-container">
+
+  <!-- ─── HOME PAGE ──────────────────────────────── -->
+  <section id="page-home" class="page active">
+    <div id="title">Stellar-Evo</div>
+    <div id="button-container">
+      <button type="button" id="play-btn" class="btn">
+        <strong>Play</strong>
+        <div id="container-stars"><div id="stars"></div></div>
+        <div id="glow">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </button>
+      <div id="load-status">Loading assets… 0%</div>
+    </div>
+  </section>
+
+  <!-- ─── MASS INPUT PAGE ────────────────────────── -->
+  <section id="page-mass" class="page">
+    <div id="mass-card">
+
+      <div id="mass-title">Define Your Star</div>
+      <div id="mass-subtitle">
+        Enter the stellar mass to begin the evolution simulation.
+      </div>
+
+      <div id="mass-input-row">
+        <span id="mass-m-label">M =</span>
+
+        <input
+          id="mass-input"
+          type="number"
+          min="0.08"
+          max="150"
+          step="0.1"
+          placeholder="1.0"
+          autocomplete="off"
+        />
+
+        <!-- Solar mass symbol M☉ -->
+        <span id="mass-unit">M<sub>&#9737;</sub></span>
+
+        <!-- Tooltip trigger -->
+        <div id="mass-tip-wrap">
+          <span id="mass-tip-icon">?</span>
+          <div id="mass-tip-bubble">
+            <strong>M<sub>&#9737;</sub></strong> stands for <em>solar mass</em> —
+            the mass of our Sun (approx. 2 &times; 10<sup>30</sup> kg).
+            It is the standard unit used by astronomers to measure stellar masses.
+            <br><br>
+            <span class="tip-range">
+              Typical range: 0.08 – 150 M<sub>&#9737;</sub>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div id="mass-error"></div>
+
+      <button id="begin-btn" class="btn mass-begin-btn" disabled>
+        <strong>Begin Simulation</strong>
+        <div class="begin-stars-wrap"><div class="begin-stars"></div></div>
+        <div class="begin-glow">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ─── SIM PAGE ───────────────────────────────── -->
+  <section id="page-sim" class="page">
+
+    <div id="stage-info">
+      <div id="stage-label">Nebula</div>
+      <div id="stage-desc">A vast cloud of gas and dust.</div>
     </div>
 
-    <script type="module" src="src/main.js"></script>
+    <div id="years">~10 million yrs</div>
+
+    <div id="nav-bar">
+      <button id="prev-btn" class="nav-btn" disabled>&#8592; Prev</button>
+      <div id="progress-dots"></div>
+      <button id="next-btn" class="nav-btn">Next &#8594;</button>
+    </div>
+
+    <div id="loading-overlay" class="hidden">
+      <div class="spinner"></div>
+      <span>Loading…</span>
+    </div>
+
+  </section>
+
+</div>
+
+<script type="module" src="src/main.js"></script>
 </body>
 </html>

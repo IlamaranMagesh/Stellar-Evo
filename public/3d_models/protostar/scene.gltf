@@ -3,24 +3,78 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 323,
+      "count": 559,
       "max": [
-        0.5,
-        0.5,
-        4.115807056427002
+        2.169219970703125,
+        2.169224739074707,
+        2.1692206859588623
       ],
       "min": [
-        -0.5,
-        -0.5,
-        3.115807056427002
+        -2.1692185401916504,
+        -2.169224739074707,
+        -2.1692190170288086
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 3876,
+      "byteOffset": 6708,
       "componentType": 5126,
-      "count": 323,
+      "count": 559,
+      "max": [
+        0.9999983310699463,
+        1.0,
+        0.9999983310699463
+      ],
+      "min": [
+        -0.9999983310699463,
+        -1.0,
+        -0.9999983310699463
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 2880,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 13416,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        22.705060958862305,
+        22.705068588256836,
+        22.705068588256836
+      ],
+      "min": [
+        -22.705047607421875,
+        -22.705068588256836,
+        -22.705053329467773
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 20124,
+      "componentType": 5126,
+      "count": 559,
       "max": [
         1.0,
         1.0,
@@ -35,54 +89,56 @@
     },
     {
       "bufferView": 1,
+      "byteOffset": 4472,
       "componentType": 5126,
-      "count": 323,
+      "count": 559,
       "max": [
-        0.0,
+        1.0,
         1.0
       ],
       "min": [
-        -1.0,
-        0.0833333432674408
+        0.0,
+        0.0
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
+      "byteOffset": 11520,
       "componentType": 5125,
-      "count": 1584,
+      "count": 2880,
       "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "YouAreCool8294 (https://sketchfab.com/YouAreCool8294)",
+      "author": "Azariah Animates (https://sketchfab.com/Azariah_Animates)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/vesta-211c60fc4ef94e8f900a8bc51befc316",
-      "title": "Vesta"
+      "source": "https://sketchfab.com/3d-models/beetleguese-big-but-draining-star-8444f7378572465c815691a83666c967",
+      "title": "Beetleguese: Big But Draining Star"
     },
-    "generator": "Sketchfab-16.31.0",
+    "generator": "Sketchfab-16.95.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 6336,
+      "byteLength": 23040,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 2584,
-      "byteOffset": 6336,
+      "byteLength": 8944,
+      "byteOffset": 23040,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 7752,
-      "byteOffset": 8920,
+      "byteLength": 26832,
+      "byteOffset": 31984,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
@@ -90,25 +146,43 @@
   ],
   "buffers": [
     {
-      "byteLength": 16672,
+      "byteLength": 58816,
       "uri": "scene.bin"
     }
   ],
+  "extensionsUsed": [
+    "KHR_materials_unlit"
+  ],
   "images": [
     {
-      "uri": "textures/Material_baseColor.png"
+      "uri": "textures/mat0_baseColor.jpeg"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "name": "Material",
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "mat0",
       "pbrMetallicRoughness": {
         "baseColorTexture": {
           "index": 0
         },
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.6
+        "metallicFactor": 0.0
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "mat1",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
       }
     }
   ],
@@ -127,6 +201,21 @@
           "mode": 4
         }
       ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
     }
   ],
   "nodes": [
@@ -140,12 +229,12 @@
         0.0,
         0.0,
         0.0,
-        2.220446049250313e-16,
         -1.0,
+        -4.440892098500626e-16,
         0.0,
         0.0,
-        1.0,
-        2.220446049250313e-16,
+        4.440892098500626e-16,
+        -1.0,
         0.0,
         0.0,
         0.0,
@@ -156,13 +245,18 @@
     },
     {
       "children": [
-        2
+        2,
+        3
       ],
-      "name": "2a2e564e6c1946648028aef7771cef5c.obj.cleaner.materialmerger.gles"
+      "name": "Mercury.obj.cleaner.materialmerger.gles"
     },
     {
       "mesh": 0,
       "name": "Object_2"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_3"
     }
   ],
   "samplers": [

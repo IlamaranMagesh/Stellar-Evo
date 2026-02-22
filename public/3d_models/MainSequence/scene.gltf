@@ -3,40 +3,40 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 6214,
+      "count": 559,
       "max": [
-        979.2091064453125,
-        978.34130859375,
-        1010.1951904296875
+        2.169219970703125,
+        2.169224739074707,
+        2.1692206859588623
       ],
       "min": [
-        -979.2091064453125,
-        -978.34130859375,
-        -1010.1951904296875
+        -2.1692185401916504,
+        -2.169224739074707,
+        -2.1692190170288086
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 74568,
+      "byteOffset": 6708,
       "componentType": 5126,
-      "count": 6214,
+      "count": 559,
       "max": [
-        0.9995918273925781,
+        0.9999983310699463,
         1.0,
-        0.9991385340690613
+        0.9999983310699463
       ],
       "min": [
-        -0.9995918273925781,
+        -0.9999983310699463,
         -1.0,
-        -0.9991385340690613
+        -0.9999983310699463
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 6214,
+      "count": 559,
       "max": [
         1.0,
         1.0
@@ -50,63 +50,48 @@
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 35640,
+      "count": 2880,
       "type": "SCALAR"
     },
     {
       "bufferView": 2,
-      "byteOffset": 149136,
+      "byteOffset": 13416,
       "componentType": 5126,
-      "count": 6214,
+      "count": 559,
       "max": [
-        945.6148681640625,
-        946.0,
-        945.2359008789063
+        22.705060958862305,
+        22.705068588256836,
+        22.705068588256836
       ],
       "min": [
-        -945.6148681640625,
-        -946.0,
-        -945.2359008789063
+        -22.705047607421875,
+        -22.705068588256836,
+        -22.705053329467773
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 223704,
+      "byteOffset": 20124,
       "componentType": 5126,
-      "count": 6214,
+      "count": 559,
       "max": [
-        0.9995929002761841,
         1.0,
-        0.9991922974586487
+        1.0,
+        1.0
       ],
       "min": [
-        -0.9995929002761841,
         -1.0,
-        -0.9991922974586487
+        -1.0,
+        -1.0
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
-      "byteOffset": 49712,
+      "byteOffset": 4472,
       "componentType": 5126,
-      "count": 6214,
-      "max": [
-        1.0,
-        1.0
-      ],
-      "min": [
-        0.0,
-        0.0
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 99424,
-      "componentType": 5126,
-      "count": 6214,
+      "count": 559,
       "max": [
         1.0,
         1.0
@@ -119,41 +104,41 @@
     },
     {
       "bufferView": 0,
-      "byteOffset": 142560,
+      "byteOffset": 11520,
       "componentType": 5125,
-      "count": 35640,
+      "count": 2880,
       "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "Matt kelly (https://sketchfab.com/matt.k)",
-      "license": "CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)",
-      "source": "https://sketchfab.com/3d-models/3d-planet-earth-transparent-bg-ec15cc7c54f44a38b1faa73bb9dfecd3",
-      "title": "3D Planet Earth (Transparent BG)"
+      "author": "Azariah Animates (https://sketchfab.com/Azariah_Animates)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/beetleguese-big-but-draining-star-8444f7378572465c815691a83666c967",
+      "title": "Beetleguese: Big But Draining Star"
     },
-    "generator": "Sketchfab-12.68.0",
+    "generator": "Sketchfab-16.95.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 285120,
+      "byteLength": 23040,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 149136,
-      "byteOffset": 285120,
+      "byteLength": 8944,
+      "byteOffset": 23040,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 298272,
-      "byteOffset": 434256,
+      "byteLength": 26832,
+      "byteOffset": 31984,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
@@ -161,74 +146,49 @@
   ],
   "buffers": [
     {
-      "byteLength": 732528,
+      "byteLength": 58816,
       "uri": "scene.bin"
     }
   ],
+  "extensionsUsed": [
+    "KHR_materials_unlit"
+  ],
   "images": [
     {
-      "uri": "textures/Mat.1_baseColor.jpeg"
-    },
-    {
-      "uri": "textures/material_baseColor.jpeg"
-    },
-    {
-      "uri": "textures/material_metallicRoughness.png"
+      "uri": "textures/mat0_baseColor.jpeg"
     }
   ],
   "materials": [
     {
-      "alphaMode": "BLEND",
-      "emissiveFactor": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "emissiveTexture": {
-        "index": 0
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_unlit": {}
       },
-      "name": "Mat.1",
+      "name": "mat0",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          1.0,
-          1.0,
-          1.0,
-          0.8109756097560975
-        ],
         "baseColorTexture": {
           "index": 0
         },
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.4695121951219512
+        "metallicFactor": 0.0
       }
     },
     {
-      "emissiveFactor": [
-        0.0,
-        0.05053448759240673,
-        0.4595153340887693
-      ],
-      "name": "material",
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "mat1",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.402439024390244,
-          0.402439024390244,
-          0.402439024390244,
-          1.0
-        ],
         "baseColorTexture": {
-          "index": 1
+          "index": 0
         },
-        "metallicRoughnessTexture": {
-          "index": 2
-        },
-        "roughnessFactor": 0.0
+        "metallicFactor": 0.0
       }
     }
   ],
   "meshes": [
     {
-      "name": "Earth_1_Mat.1_0",
+      "name": "Object_0",
       "primitives": [
         {
           "attributes": {
@@ -243,16 +203,15 @@
       ]
     },
     {
-      "name": "Earth_1_Mat_0",
+      "name": "Object_1",
       "primitives": [
         {
           "attributes": {
             "NORMAL": 5,
             "POSITION": 4,
-            "TEXCOORD_0": 6,
-            "TEXCOORD_1": 7
+            "TEXCOORD_0": 6
           },
-          "indices": 8,
+          "indices": 7,
           "material": 1,
           "mode": 4
         }
@@ -265,17 +224,17 @@
         1
       ],
       "matrix": [
-        0.0009725994314067066,
+        1.0,
         0.0,
         0.0,
         0.0,
         0.0,
-        2.1596045649701225e-19,
-        -0.0009725994314067066,
+        -1.0,
+        -4.440892098500626e-16,
         0.0,
         0.0,
-        0.0009725994314067066,
-        2.1596045649701225e-19,
+        4.440892098500626e-16,
+        -1.0,
         0.0,
         0.0,
         0.0,
@@ -286,75 +245,21 @@
     },
     {
       "children": [
-        2
-      ],
-      "matrix": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        -1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "6810927a861348ec90a724b1f2829abb.fbx"
-    },
-    {
-      "children": [
+        2,
         3
       ],
-      "name": "RootNode"
-    },
-    {
-      "children": [
-        4,
-        5
-      ],
-      "matrix": [
-        0.9990577796737524,
-        0.0,
-        -0.04339991789568339,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.04339991789568339,
-        0.0,
-        0.9990577796737524,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "Earth_1"
+      "name": "Mercury.obj.cleaner.materialmerger.gles"
     },
     {
       "mesh": 0,
-      "name": "Earth_1_Mat.1_0"
+      "name": "Object_2"
     },
     {
       "mesh": 1,
-      "name": "Earth_1_Mat_0"
+      "name": "Object_3"
     }
   ],
   "samplers": [
-    {
-      "magFilter": 9728,
-      "minFilter": 9728,
-      "wrapS": 10497,
-      "wrapT": 10497
-    },
     {
       "magFilter": 9729,
       "minFilter": 9987,
@@ -375,14 +280,6 @@
     {
       "sampler": 0,
       "source": 0
-    },
-    {
-      "sampler": 1,
-      "source": 1
-    },
-    {
-      "sampler": 1,
-      "source": 2
     }
   ]
 }

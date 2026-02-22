@@ -5,14 +5,14 @@
       "componentType": 5126,
       "count": 559,
       "max": [
-        79775.8671875,
-        79775.890625,
-        79775.890625
+        2.169219970703125,
+        2.169224739074707,
+        2.1692206859588623
       ],
       "min": [
-        -79775.8125,
-        -79775.890625,
-        -79775.8359375
+        -2.1692185401916504,
+        -2.169224739074707,
+        -2.1692190170288086
       ],
       "type": "VEC3"
     },
@@ -22,14 +22,14 @@
       "componentType": 5126,
       "count": 559,
       "max": [
+        0.9999983310699463,
         1.0,
-        1.0,
-        1.0
+        0.9999983310699463
       ],
       "min": [
+        -0.9999983310699463,
         -1.0,
-        -1.0,
-        -1.0
+        -0.9999983310699463
       ],
       "type": "VEC3"
     },
@@ -52,37 +52,93 @@
       "componentType": 5125,
       "count": 2880,
       "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 13416,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        22.705060958862305,
+        22.705068588256836,
+        22.705068588256836
+      ],
+      "min": [
+        -22.705047607421875,
+        -22.705068588256836,
+        -22.705053329467773
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 20124,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 4472,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 11520,
+      "componentType": 5125,
+      "count": 2880,
+      "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "Jungle Jim (https://sketchfab.com/jungle_jim)",
+      "author": "Azariah Animates (https://sketchfab.com/Azariah_Animates)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/nebula-skybox-16k-0d1e380993a842e6a0111f09c5cb6bdc",
-      "title": "Nebula skybox 16k"
+      "source": "https://sketchfab.com/3d-models/beetleguese-big-but-draining-star-8444f7378572465c815691a83666c967",
+      "title": "Beetleguese: Big But Draining Star"
     },
-    "generator": "Sketchfab-16.72.0",
+    "generator": "Sketchfab-16.95.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 11520,
+      "byteLength": 23040,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 4472,
-      "byteOffset": 11520,
+      "byteLength": 8944,
+      "byteOffset": 23040,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 13416,
-      "byteOffset": 15992,
+      "byteLength": 26832,
+      "byteOffset": 31984,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
@@ -90,39 +146,49 @@
   ],
   "buffers": [
     {
-      "byteLength": 29408,
+      "byteLength": 58816,
       "uri": "scene.bin"
     }
   ],
+  "extensionsUsed": [
+    "KHR_materials_unlit"
+  ],
   "images": [
     {
-      "uri": "textures/Material.001_baseColor.jpeg"
+      "uri": "textures/mat0_baseColor.jpeg"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "emissiveFactor": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "emissiveTexture": {
-        "index": 0
+      "extensions": {
+        "KHR_materials_unlit": {}
       },
-      "name": "Material.001",
+      "name": "mat0",
       "pbrMetallicRoughness": {
         "baseColorTexture": {
           "index": 0
         },
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.9159103584746285
+        "metallicFactor": 0.0
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "mat1",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
       }
     }
   ],
   "meshes": [
     {
-      "name": "Nebula Skybox_Material.001_0",
+      "name": "Object_0",
       "primitives": [
         {
           "attributes": {
@@ -132,6 +198,21 @@
           },
           "indices": 3,
           "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
           "mode": 4
         }
       ]
@@ -148,12 +229,12 @@
         0.0,
         0.0,
         0.0,
-        2.220446049250313e-16,
         -1.0,
+        -4.440892098500626e-16,
         0.0,
         0.0,
-        1.0,
-        2.220446049250313e-16,
+        4.440892098500626e-16,
+        -1.0,
         0.0,
         0.0,
         0.0,
@@ -164,61 +245,18 @@
     },
     {
       "children": [
-        2
-      ],
-      "matrix": [
-        0.009999999776482582,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        -0.009999999776482582,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        -0.009999999776482582,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "aecf6c83116841f78c8f1a5d689d1bba.fbx"
-    },
-    {
-      "children": [
+        2,
         3
       ],
-      "name": "RootNode"
-    },
-    {
-      "children": [
-        4
-      ],
-      "matrix": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        2.220446049250313e-16,
-        1.0,
-        0.0,
-        0.0,
-        -1.0,
-        2.220446049250313e-16,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "Nebula Skybox"
+      "name": "Mercury.obj.cleaner.materialmerger.gles"
     },
     {
       "mesh": 0,
-      "name": "Nebula Skybox_Material.001_0"
+      "name": "Object_2"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_3"
     }
   ],
   "samplers": [

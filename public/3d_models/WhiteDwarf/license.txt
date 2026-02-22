@@ -1,6 +1,6 @@
 Model Information:
-* title:	White Dwarf Star: A Stars Child
-* source:	https://sketchfab.com/3d-models/white-dwarf-star-a-stars-child-402e7e341ad8428b9213ad6fee8c9719
+* title:	Beetleguese: Big But Draining Star
+* source:	https://sketchfab.com/3d-models/beetleguese-big-but-draining-star-8444f7378572465c815691a83666c967
 * author:	Azariah Animates (https://sketchfab.com/Azariah_Animates)
 
 Model License:
@@ -8,4 +8,4 @@ Model License:
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "White Dwarf Star: A Stars Child" (https://sketchfab.com/3d-models/white-dwarf-star-a-stars-child-402e7e341ad8428b9213ad6fee8c9719) by Azariah Animates (https://sketchfab.com/Azariah_Animates) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Beetleguese: Big But Draining Star" (https://sketchfab.com/3d-models/beetleguese-big-but-draining-star-8444f7378572465c815691a83666c967) by Azariah Animates (https://sketchfab.com/Azariah_Animates) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
