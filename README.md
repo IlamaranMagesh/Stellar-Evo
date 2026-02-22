@@ -1,4 +1,4 @@
-# ✨ Stellar-Evo - VibeCode 🌌
+# ✨ Stellar-Evo 🌌
 
 The website simulates and visualizes the entire lifecycle of a star—from a protostar within a primordial nebula, through its expansion into a red giant and possible supernova explosion, to its final form as a white dwarf, neutron star, or black hole—based on initial parameters input by the user, such as the star’s mass.
 ---
