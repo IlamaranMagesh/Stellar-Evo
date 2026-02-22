@@ -17,7 +17,7 @@ export const PATH1 = [
     lightColor: 0x8866ff,
     lightIntensity: 1.5,
     ambientIntensity: 0.25,
-    displaySize: 1.5,
+    displaySize: 4,
   },
   {
     id: 'protostar',
@@ -85,7 +85,7 @@ export const PATH2 = [
     lightColor: 0x8866ff,
     lightIntensity: 1.5,
     ambientIntensity: 0.25,
-    displaySize: 1.5,
+    displaySize: 4,
   },
   {
     id: 'protostar',
@@ -128,7 +128,7 @@ export const PATH2 = [
     label: 'Supernova',
     modelPath: '/3d_models/Supernova/',
     description: 'The core collapses in an instant — a colossal explosion tears the star apart.',
-    durationYears: 1,
+    durationYears: 1_000_000_000_000,
     cameraDistance: 8,
     lightColor: 0xffffff,
     lightIntensity: 1.5,
@@ -443,8 +443,8 @@ export class StellarPath {
 
       if (tr.prevModel) {
         tr.prevModel.rotation.y += eIn * tr.SPIN_MAX;
-        const eScale = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-        tr.prevModel.scale.setScalar(tr.fromSize + (tr.toSize - tr.fromSize) * eScale);
+        // const eScale = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        // tr.prevModel.scale.setScalar(tr.fromSize + (tr.toSize - tr.fromSize) * eScale);
       }
 
       if (t >= 1 && !tr.swapped) {
