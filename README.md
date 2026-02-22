@@ -15,7 +15,7 @@ The website simulates and visualizes the entire lifecycle of a star—from a pro
 
 ## 📸 Screenshots
 
-Screenshot
+[Screenshot](https://raw.githubusercontent.com/IlamaranMagesh/Stellar-Evo/refs/heads/main/public/ScreenShots/1.png)
 
 ---
 
